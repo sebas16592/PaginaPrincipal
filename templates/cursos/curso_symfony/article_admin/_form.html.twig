@@ -1,0 +1,30 @@
+{{ form_start(articleForm) }}
+        {{ articleForm.title.vars.id }}
+        {{ form_row(articleForm.title, {
+            label : 'Article Title'
+        }) }}
+        {#
+        {{ form_label(articleForm.title, 'Article title') }}
+        {{ form_errors(articleForm.title) }}
+        {{ form_widget(articleForm.title) }}
+        {{ form_help(articleForm.title) }}
+        #}
+        {{ form_row(articleForm.author) }}
+        {{ form_row(articleForm.location, {
+            attr: {
+                'data-specific-location-url': path('curso_symfony_admin_location_select'),
+                'class': 'js-article-form-location'
+            }
+        }) }}
+        <div class="js-specific-location-target">
+            {%  if articleForm.specificLocationName is defined %}
+                {{ form_row(articleForm.specificLocationName) }}
+            {% endif %}
+        </div>
+        {{ form_row(articleForm.content) }}
+        {% if articleForm.publishedAt is defined %}
+            {{ form_row(articleForm.publishedAt) }}
+        {% endif %}
+
+<button type="submit" >{{ button_text }}</button>
+{{ form_end(articleForm) }}

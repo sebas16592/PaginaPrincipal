@@ -1,0 +1,118 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block stylesheets %}
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="{{ asset('admin/assets/css/scrollspyNav.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admin/assets/css/components/cards/card.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('node_modules/@fortawesome/fontawesome-free/css/all.min.css') }}">
+    <!--  END CUSTOM STYLE FILE  -->
+
+    <style>
+        .meta-date {
+            margin-bottom: 5px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #009688; }
+
+        .meta-info {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            padding-top: 15px; }
+        .meta-action {
+            display: flex; }
+        .meta-likes {
+            align-self: center;
+            margin-right: 13px;
+            color: #009688; }
+        .meta-view {
+            align-self: center;
+            color: #009688; }
+    </style>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('cursos/cursoSymfony/js/article_show.js.js') }}"></script>
+{% endblock %}
+{% block title %}
+    {{ article.title }}
+{% endblock %}
+{% block body %}
+    <div class="main-content" id="content">
+        <div class="layout-px-spacing">
+
+            <div class="container">
+                <div class="container">
+                    <div class="row layout-spacing layout-top-spacing">
+                        <div class="col-lg-12">
+                            <div class="wizard">
+                                <div class="widget-content widget-content-area bx-top-6">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h1 class="text-center">
+                                                {{ article.title }}
+                                            </h1>
+                                            <p class="meta-date" style="color: #009688">{{ article.publishedAt ? article.publishedAt|ago : 'Sin publicar' }}</p>
+                                            <div class="meta-likes" style="display: block;">
+                                                {{ article.author }}
+                                            </div>
+                                            <div class="meta-info">
+                                                <div class="meta-action" >
+
+                                                    <div class="meta-likes">
+                                                        <span class="js-like-article-count">{{ article.heartCount }}</span>
+                                                        <a href="{{ path('article_toggle_heart',{slug : article.slug}) }}" class="like-article js-like-article far fa-heart" style="color: #009688;"></a>
+                                                    </div>
+                                                    <div class="meta-view">
+                                                        <a href="#" style="color: #009688"><i class="fa fa-eye"></i></a> 250
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="pl-2 article-details">
+                                                {% for tag in article.tags %}
+                                                    <span class="badge badge-secondary">{{ tag.name }}</span>
+                                                {% endfor %}
+                                            </span>
+                                            <div class="">
+                                               {{ article.content|cached_markdown }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        comentarios total: {{ article.nonDeletedComments|length }}
+                    </div>
+                </div>
+                <div class="row layout-spacing layout-top-spacing">
+                    {% for comment in article.nonDeletedComments %}
+                        <div class="col-lg-12">
+                            {{ comment.authorName }}
+                            {{ comment.content }}
+                            about {{ comment.createdAt|ago }}
+                            {% if comment.isDeleted %}
+                                <span class="fa fa-close"></span> deleted
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="footer-wrapper">
+            <div class="footer-section f-section-1">
+                <p class="">Copyright © 2020 <a target="_blank" href="https://designreset.com">DesignReset</a>, All rights reserved.</p>
+            </div>
+            <div class="footer-section f-section-2">
+                <p class="">Coded with <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}<title>Lista Cursos</title>{% endblock %}
+
+{% block body %}
+    <h1>Lista De Cursos</h1>
+    <ul>
+        <li><a href="{{ path('curso_css_index') }}">Cursos CSS</a></li>
+        <li><a href="">Pronto</a></li>
+        <li><a href="{{ path('curso_symfony_homepage') }}">Symfony</a></li>
+    </ul>
+{% endblock %}

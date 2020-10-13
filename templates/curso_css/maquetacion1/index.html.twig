@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('cursos/cursoCss/maquetacion1/img/logo.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('cursos/cursoCss/maquetacion1/css/styles.css') }}">
+</head>
+<body>
+    <!-- inicio de la cabecera-->
+    <header id="header">
+        <div id="logotipo">
+            <img src="{{ asset('cursos/cursoCss/maquetacion1/img/logo.png') }}" alt="logitipo de la web">
+        </div>
+        <h1>
+            <a href="{{ path('curso_css_maquetacion1') }}">
+                MASTER EN CSS
+            </a>
+        </h1>
+
+    </header>
+    <!-- fin de la cabecera-->
+
+    <!-- Menú De Navegación-->
+    <nav id="nav">
+        <ul>
+            <li>
+                <a href="{{ path('curso_css_maquetacion1') }}">Inicio</a>
+            </li>
+            <li>
+                <a href="">Contenido</a>
+            </li>
+            <li>
+                <a href="">Requerimientos</a>
+            </li>
+            <li>
+                <a href="">Lenguajes</a>
+                <ul>
+                    <li>
+                        <a href="">Html</a>
+                    </li>
+                    <li>
+                        <a href="">Css</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Frameworks</a>
+                <ul>
+                    <li>
+                        <a href="">LESS</a>
+                    </li>
+                    <li>
+                        <a href="">SASS</a>
+                    </li>
+                    <li>
+                        <a href="">Bootstrap</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Proyectos</a>
+            </li>
+            <li>
+                <a href="">Instructor</a>
+            </li>
+            <li>
+                <a href="">Reseñas</a>
+            </li>
+            <li>
+                <a href="">Blog</a>
+            </li>
+            <li>
+                <a href="">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Fin Del menú de navegación-->
+
+    <!-- Inicio del contenido central -->
+
+    <div id="content">
+
+        <!-- Inicio de la barra lateral-->
+        <aside id="aside">
+            <div class="widget" id="login">
+                <h3>Entrar a la web</h3>
+                <form action="">
+                    <label for="">Usuario:</label>
+                    <input type="text">
+                    <label for="">Contraseña:</label>
+                    <input type="password">
+                    <input type="submit" value="Entrar">
+
+                </form>
+                <a href="">Zona de alumnos</a>
+                <a href="">Zona de profesor</a>
+                <a href="">Acceso a calificaciones</a>
+            </div>
+            <div class="widget" id="login">
+                <h3 class="blue">Aula virtual 1</h3>
+                <form action="">
+                    <label for="">Nombre de usuario:</label>
+                    <input type="text">
+                    <label for="">Contraseña:</label>
+                    <input type="password">
+                    <input type="submit" value="Entrar">
+                </form>
+            </div>
+            <div class="widget" id="login">
+                <h3 class="red">Aula virtual 2</h3>
+                <form action="">
+                    <label for="">Nombre de usuario:</label>
+                    <input type="text">
+                    <label for="">Contraseña:</label>
+                    <input type="password">
+                    <input type="submit" value="Entrar">
+                </form>
+            </div>
+            <div class="widget" id="login">
+                <h3>Enlaces de interes</h3>
+                <ul>
+                    <li>
+                        <a href="">Master en Css</a>
+                    </li>
+                    <li>
+                        <a href="">Master en PHP</a>
+                    </li>
+                    <li>
+                        <a href="">Master en Javascript</a>
+                    </li>
+                    <li>
+                        <a href="">Master en Frameworks</a>
+                    </li>
+                </ul>
+
+            </div>
+        </aside>
+
+
+        <!-- Fin de la barra lateral -->
+
+        <!-- Inicio de las secciones -->
+        <div id="sections">
+            <section id="frontend">
+                <span class="stickers">
+                    <img class="stickerOne" src="{{ asset('cursos/cursoCss/maquetacion1/img/scotch.png') }}" alt="Pegatina">
+                    <img class="stickerTwo" src="{{ asset('cursos/cursoCss/maquetacion1/img/scotch.png') }}" alt="Pegatina">
+                </span>
+                <h2 class="titulo">Noticias de frontend</h2>
+                <article class="article">
+                    <span class="icon">a</span>
+                    <p>
+                        <a href="">Titulo de la entrada</a>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur doloribus incidunt! Atque aut dolorem, error fugit reprehenderit veniam. Ab eum exercitationem hic illum in nemo officiis quia ratione sunt?
+                    </p>
+                    <span class="date">[7-07-2020. Sebas Hernandez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a</span>
+                    <p>
+                        <a href="">Titulo de la entrada</a>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur doloribus incidunt! Atque aut dolorem, error fugit reprehenderit veniam. Ab eum exercitationem hic illum in nemo officiis quia ratione sunt?
+                    </p>
+                    <span class="date">[7-07-2020. Sebas Hernandez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a</span>
+                    <p>
+                        <a href="">Titulo de la entrada</a>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur doloribus incidunt! Atque aut dolorem, error fugit reprehenderit veniam. Ab eum exercitationem hic illum in nemo officiis quia ratione sunt?
+                    </p>
+                    <span class="date">[7-07-2020. Sebas Hernandez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a</span>
+                    <p>
+                        <a href="">Titulo de la entrada</a>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur doloribus incidunt! Atque aut dolorem, error fugit reprehenderit veniam. Ab eum exercitationem hic illum in nemo officiis quia ratione sunt?
+                    </p>
+                    <span class="date">[7-07-2020. Sebas Hernandez]</span>
+                </article>
+            </section>
+            <section id="backend">
+                <span class="stickers">
+                    <img class="stickerOne" src="{{ asset('cursos/cursoCss/maquetacion1/img/scotch.png') }}" alt="Pegatina">
+                    <img class="stickerTwo" src="{{ asset('cursos/cursoCss/maquetacion1/img/scotch.png') }}" alt="Pegatina">
+                </span>
+                <h2 class="titulo red">Noticias de frontend</h2>
+                <article class="article">
+                    <span class="icon">a</span>
+                    <p>
+                        <a href="">Titulo de backend</a>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur doloribus incidunt! Atque aut dolorem, error fugit reprehenderit veniam. Ab eum exercitationem hic illum in nemo officiis quia ratione sunt?
+                    </p>
+                    <span class="date">[7-07-2020. Sebas Hernandez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a</span>
+                    <p>
+                        <a href="">Titulo de la entrada</a>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur doloribus incidunt! Atque aut dolorem, error fugit reprehenderit veniam. Ab eum exercitationem hic illum in nemo officiis quia ratione sunt?
+                    </p>
+                    <span class="date">[7-07-2020. Sebas Hernandez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a</span>
+                    <p>
+                        <a href="">Titulo de la entrada</a>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur doloribus incidunt! Atque aut dolorem, error fugit reprehenderit veniam. Ab eum exercitationem hic illum in nemo officiis quia ratione sunt?
+                    </p>
+                    <span class="date">[7-07-2020. Sebas Hernandez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a</span>
+                    <p>
+                        <a href="">Titulo de la entrada</a>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur doloribus incidunt! Atque aut dolorem, error fugit reprehenderit veniam. Ab eum exercitationem hic illum in nemo officiis quia ratione sunt?
+                    </p>
+                    <span class="date">[7-07-2020. Sebas Hernandez]</span>
+                </article>
+            </section>
+            <section id="instructor">
+                <span class="stickers">
+                    <img class="stickerOne" src="{{ asset('cursos/cursoCss/maquetacion1/img/scotch.png') }}" alt="Pegatina">
+                    <img class="stickerTwo" src="{{ asset('cursos/cursoCss/maquetacion1/img/scotch.png') }}" alt="Pegatina">
+                </span>
+                <h2 class="titulo orange">Noticias del instructor</h2>
+                <article class="article">
+                    <span class="icon">a</span>
+                    <p>
+                        <a href="">Titulo de la entrada</a>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur doloribus incidunt! Atque aut dolorem, error fugit reprehenderit veniam. Ab eum exercitationem hic illum in nemo officiis quia ratione sunt?
+                    </p>
+                    <span class="date">[7-07-2020. Sebas Hernandez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a</span>
+                    <p>
+                        <a href="">Titulo de la entrada</a>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur doloribus incidunt! Atque aut dolorem, error fugit reprehenderit veniam. Ab eum exercitationem hic illum in nemo officiis quia ratione sunt?
+                    </p>
+                    <span class="date">[7-07-2020. Sebas Hernandez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a</span>
+                    <p>
+                        <a href="">Titulo de la entrada</a>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur doloribus incidunt! Atque aut dolorem, error fugit reprehenderit veniam. Ab eum exercitationem hic illum in nemo officiis quia ratione sunt?
+                    </p>
+                    <span class="date">[7-07-2020. Sebas Hernandez]</span>
+                </article>
+                <article class="article">
+                    <span class="icon">a</span>
+                    <p>
+                        <a href="">Titulo de la entrada</a>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur doloribus incidunt! Atque aut dolorem, error fugit reprehenderit veniam. Ab eum exercitationem hic illum in nemo officiis quia ratione sunt?
+                    </p>
+                    <span class="date">[7-07-2020. Sebas Hernandez]</span>
+                </article>
+            </section>
+        </div>
+        <!-- Fin de las secciones -->
+
+        <aside id="frase">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut exercitationem fuga illum, inventore modi nesciunt nulla optio reprehenderit repudiandae sint velit. Ab cumque eligendi id ipsa iste nulla provident?
+            <a href="">Leer mas</a>
+        </aside>
+
+        <div class="clearfix"></div>
+
+        <div id="history">
+            <a href="">[Ver historico de noticias]</a>
+        </div>
+
+    </div>
+
+    <!-- Fin del contenido central-->
+
+    <div class="clearfix"></div>
+    <footer id="footer">
+        <p>&copy; Desarrollado por Sebas Hernandez.</p>
+        <p>Mas contenido y formacion de desarrollo web <a href="https://sebashernandez.com">Sebas Hernandez</a></p>
+    </footer>
+
+</body>
+</html>

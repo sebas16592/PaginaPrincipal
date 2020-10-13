@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AccountController!{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1>Manage Your Account {{ app.user.nombre }}</h1>
+    <img src="{{ app.user.avatarUrl }}" class="img-responsive thumbnail">
+    <h3>Welcome back, {{ app.user.nombre }}</h3>
+    {% if app.user.twitterUsername %}
+        <h4 class="white"><i class="fa fa-twitter"></i> {{ app.user.twitterUsername }}</h4>
+    {% endif %}
+    <img src="{{ app.user.avatarUrl(100) }}" class="img-responsive thumbnail">
+</div>
+{% endblock %}

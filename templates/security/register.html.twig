@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme registrationForm _self %}
+
+{% block form_row %}
+    {%- set widget_attr = {} -%}
+    {%- if help is not empty -%}
+        {%- set widget_attr = {attr: {'aria-describedby': id ~"_help"}} -%}
+    {%- endif -%}
+
+    {{- form_label(form, null, {
+        label_attr: { class: 'sr-only' }
+    }) -}}
+    {{- form_errors(form) -}}
+    {{- form_widget(form, widget_attr) -}}
+    {{- form_help(form) -}}
+{% endblock %}
+
+{% block _usuario_registration_form_agreeTerms_row %}
+    <div class="checkbox mb-3">
+        {{ form_errors(form) }}
+        <label>
+            <input type="checkbox" name="{{ full_name }}" required>  Agree to terms I for sure read
+        </label>
+    </div>
+{% endblock %}
+
+{% block body %}
+
+<div class="form-container">
+    <div class="form-form">
+        <div class="form-form-wrap">
+            <div class="form-container">
+                <div class="form-content">
+
+                    {# todo - replace with a Symfony form! #}
+                    {#<form class="text-left" method="post">
+                        <div class="form">
+                            <div id="email-field" class="field-wrapper input">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+
+                                <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                            </div>
+
+                            <div id="password-field" class="field-wrapper input mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                <input id="inputPassword" name="password" type="password" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="checkbox mb-3">
+                                <label>
+                                    <input type="checkbox" name="_remember_me" required>  Agree to terms I for sure read
+                                </label>
+                            </div>
+
+                            <div class="d-sm-flex justify-content-between">
+
+                                <div class="field-wrapper">
+                                    <button type="submit" class="btn btn-primary" value="">Log In</button>
+                                </div>
+
+                            </div>
+
+                            <input type="hidden" name="_csrf_token"
+                                   value="{{ csrf_token('authenticate') }}"
+                            >
+
+                            {#
+                            If you want to control the URL the user
+                            is redirected to on success (more details below)
+                            <input type="hidden" name="_target_path" value="/account" />
+
+
+
+
+                        </div>
+                    </form>#}
+                    {#label_attr: { class: 'sr-only' }  tambien se podia en las variablews por linea#}
+                    {{ form_start(registrationForm, {
+                        attr: { class:'form-signin' },
+
+                    }) }}
+                    <h1 class="">Registrate en <a href="index.html"><span class="brand-name">CORK</span></a></h1>
+                    {#{{ form_widget(registrationForm) }}#}
+                    {{ form_row(registrationForm.email, {
+                        attr : { placeholder: 'Email' }
+                    }) }}
+                    {{ form_row(registrationForm.plainPassword, {
+                        attr : { placeholder: 'Password' }
+                    }) }}
+                    {{ form_row(registrationForm.agreeTerms) }}
+
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">
+                            Register
+                        </button>
+                    {{ form_end(registrationForm) }}
+                    <p class="terms-conditions">© 2019 All Rights Reserved. <a href="index.html">CORK</a> is a product of Designreset. <a href="javascript:void(0);">Cookie Preferences</a>, <a href="javascript:void(0);">Privacy</a>, and <a href="javascript:void(0);">Terms</a>.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-image">
+        <div class="l-image">
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

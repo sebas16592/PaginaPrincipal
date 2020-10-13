@@ -1,0 +1,48 @@
+symfony.sh
+twig.symfony.com
+https://twig-extensions.readthedocs.io/en/latest/
+composer require server
+composer require annotations
+composer require sec-checker
+composer require twig
+composer require profiler --dev
+composer require debug --dev
+composer require asset
+composer require knplabs/knp-markdown-bundle
+composer require nexylan/slack-bundle:2.2.0 php-http/guzzle6-adapter:1.1.1
+composer require doctrine
+composer require knplabs/knp-time-bundle
+composer require sensio/framework-extra-bundle
+composer require orm-fixtures --dev
+composer require fzaninotto/faker --dev
+composer require antishov/doctrine-extensions-bundle
+composer require twig/extensions
+composer require knplabs/knp-paginator-bundle
+composer update symfony/maker-bundle
+composer require security
+composer require serializer
+composer require form
+composer require validator
+
+./bin/console debug:autowiring
+./bin/console config:dump KnpMarkdownBundle
+./bin/console config:dump TwigBundle
+./bin/console debug:container --show-private
+./bin/console debug:config framework
+./bin/console debug:container monolog.logger
+./bin/console debug:container --show-private log
+php bin/console debug:container --parameters
+php bin/console doctrine:database:create
+./bin/console make:migration
+php bin/console doctrine:migrations:migrate
+php bin/console make:twig-extension
+php bin/console make:fixtures
+php bin/console doctrine:fixtures:load
+php bin/console debug:twig
+php bin/console make:user
+php bin/console make:auth
+php bin/console doctrine:schema:drop --full-database --force
+php bin/console make:voter
+php bin/console make:form
+
+symfony doctrine event subscriber investigar

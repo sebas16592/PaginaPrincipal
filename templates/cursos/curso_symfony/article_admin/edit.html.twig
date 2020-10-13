@@ -1,0 +1,15 @@
+{% extends 'cursos/curso_symfony/base.html.twig' %}
+
+{% block body %}
+    <h1>Edit the Article!</h1>
+
+    {{ include('cursos/curso_symfony/article_admin/_form.html.twig', {
+        button_text: 'Update!'
+    }) }}
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('cursos/cursoSymfony/js/admin_article_form.js') }}"></script>
+{% endblock %}

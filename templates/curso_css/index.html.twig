@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}<title>Lista Cursos</title>{% endblock %}
+
+{% block body %}
+    <h1>Ejercicios CSS</h1>
+    <ul>
+        <li><a href="{{ path('curso_css_ejercicio1') }}">Ejercicio 1</a></li>
+        <li><a href="{{ path('curso_css_ejercicio2') }}">Ejercicio 2</a></li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,23 @@
+#httplug:
+#    plugins:
+#        retry:
+#            retry: 1
+
+#    discovery:
+#        client: 'auto'
+
+#    clients:
+#        app:
+#            http_methods_client: true
+#            plugins:
+#                - 'httplug.plugin.content_length'
+#                - 'httplug.plugin.redirect'
+#            factory: 'httplug.factory.guzzle6'
+#                    config:
+#                        verify: fals
+httplug:
+     clients:
+         app:
+             factory: 'httplug.factory.guzzle6'
+             config:
+                 verify: false

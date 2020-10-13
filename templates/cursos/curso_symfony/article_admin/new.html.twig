@@ -1,0 +1,25 @@
+{% extends 'cursos/curso_symfony/base.html.twig' %}
+
+{% block body %}
+   <h1>Launch a new Article! ?</h1>
+
+    {{ include('cursos/curso_symfony/article_admin/_form.html.twig', {
+        button_text: 'Create!'
+    }) }}
+
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link rel="stylesheet" href="{{ asset('cursos/cursoSymfony/algolia-autocomplete.css') }}">
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+    <script src="{{ asset('cursos/cursoSymfony/js/algolia-autocomplete.js') }}"></script>
+    <script src="{{ asset('cursos/cursoSymfony/js/admin_article_form.js') }}"></script>
+
+{% endblock %}
