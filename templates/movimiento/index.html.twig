@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Movimiento index{% endblock %}
+
+{% block body %}
+    <h1>Movimiento index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Descripcion</th>
+                <th>Valor</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for movimiento in movimientos %}
+            <tr>
+                <td>{{ movimiento.id }}</td>
+                <td>{{ movimiento.descripcion }}</td>
+                <td>{{ movimiento.valor }}</td>
+                <td>{{ movimiento.createdAt ? movimiento.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ movimiento.updatedAt ? movimiento.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('movimiento_show', {'id': movimiento.id}) }}">show</a>
+                    <a href="{{ path('movimiento_edit', {'id': movimiento.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('movimiento_new') }}">Create new</a>
+{% endblock %}

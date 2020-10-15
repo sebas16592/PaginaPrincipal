@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MovimientoMensual{% endblock %}
+
+{% block body %}
+    <h1>MovimientoMensual</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ movimiento_mensual.id }}</td>
+            </tr>
+            <tr>
+                <th>Descripcion</th>
+                <td>{{ movimiento_mensual.descripcion }}</td>
+            </tr>
+            <tr>
+                <th>Valor</th>
+                <td>{{ movimiento_mensual.valor }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ movimiento_mensual.createdAt ? movimiento_mensual.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ movimiento_mensual.updatedAt ? movimiento_mensual.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('movimiento_mensual_index') }}">back to list</a>
+
+    <a href="{{ path('movimiento_mensual_edit', {'id': movimiento_mensual.id}) }}">edit</a>
+
+    {{ include('movimiento_mensual/_delete_form.html.twig') }}
+{% endblock %}

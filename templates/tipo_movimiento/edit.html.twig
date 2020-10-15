@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit TipoMovimiento{% endblock %}
+
+{% block body %}
+    <h1>Edit TipoMovimiento</h1>
+
+    {{ include('tipo_movimiento/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('tipo_movimiento_index') }}">back to list</a>
+
+    {{ include('tipo_movimiento/_delete_form.html.twig') }}
+{% endblock %}

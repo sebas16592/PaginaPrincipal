@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New TipoMovimiento{% endblock %}
+
+{% block body %}
+    <h1>Create new TipoMovimiento</h1>
+
+    {{ include('tipo_movimiento/_form.html.twig') }}
+
+    <a href="{{ path('tipo_movimiento_index') }}">back to list</a>
+{% endblock %}

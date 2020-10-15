@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit MovimientoMensual{% endblock %}
+
+{% block body %}
+    <h1>Edit MovimientoMensual</h1>
+
+    {{ include('movimiento_mensual/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('movimiento_mensual_index') }}">back to list</a>
+
+    {{ include('movimiento_mensual/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New MovimientoMensual{% endblock %}
+
+{% block body %}
+    <h1>Create new MovimientoMensual</h1>
+
+    {{ include('movimiento_mensual/_form.html.twig') }}
+
+    <a href="{{ path('movimiento_mensual_index') }}">back to list</a>
+{% endblock %}

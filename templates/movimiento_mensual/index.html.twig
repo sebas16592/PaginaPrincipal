@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MovimientoMensual index{% endblock %}
+
+{% block body %}
+    <h1>MovimientoMensual index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Descripcion</th>
+                <th>Tipo Movimiento</th>
+                <th>Valor</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for movimiento_mensual in movimiento_mensuals %}
+            <tr>
+                <td>{{ movimiento_mensual.id }}</td>
+                <td>{{ movimiento_mensual.descripcion }}</td>
+                <td>{{ movimiento_mensual.tipoMovimiento.descripcion }}</td>
+                <td>{{ movimiento_mensual.valor }}</td>
+                <td>{{ movimiento_mensual.createdAt ? movimiento_mensual.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ movimiento_mensual.updatedAt ? movimiento_mensual.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('movimiento_mensual_show', {'id': movimiento_mensual.id}) }}">show</a>
+                    <a href="{{ path('movimiento_mensual_edit', {'id': movimiento_mensual.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('movimiento_mensual_new') }}">Create new</a>
+{% endblock %}
