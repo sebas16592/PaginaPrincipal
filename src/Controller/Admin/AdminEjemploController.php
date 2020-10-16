@@ -12,7 +12,7 @@ class AdminEjemploController extends AbstractController
      */
     public function index()
     {
-        return $this->render('admin/ejemplos/index.html.twig');
+        return $this->render('admin/ejemplos/index.html.twig.twig');
     }
 
     /**

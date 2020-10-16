@@ -31,7 +31,7 @@ class CursosSymfonyCommentAdminController extends AbstractController
             $request->query->getInt('page', 1)/*page number*/,
             10/*limit per page*/
         );
-        return $this->render('comment_admin/index.html.twig', [
+        return $this->render('comment_admin/index.html.twig.twig', [
             'pagination' => $pagination,
         ]);
     }

@@ -21,7 +21,7 @@ class CursosSymfonyAccountController extends BaseController
     {
         $logger->debug('Checking account page for'. $this->getUser()->getEmail());
 
-        return $this->render('account/index.html.twig', [
+        return $this->render('account/index.html.twig.twig', [
             'controller_name' => 'AccountController',
         ]);
     }

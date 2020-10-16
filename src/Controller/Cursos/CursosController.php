@@ -12,7 +12,7 @@ class CursosController extends AbstractController
      */
     public function index()
     {
-        return $this->render('cursos/index.html.twig', [
+        return $this->render('cursos/index.html.twig.twig', [
             'controller_name' => 'CursosController',
         ]);
     }

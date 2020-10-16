@@ -12,7 +12,7 @@ class CursosSymfonyHomepageController extends AbstractController
      */
     public function index()
     {
-        return $this->render('cursos/curso_symfony/homepage/index.html.twig', [
+        return $this->render('cursos/curso_symfony/homepage/index.html.twig.twig', [
             'controller_name' => 'CursosSymfonyHomepageController',
         ]);
     }

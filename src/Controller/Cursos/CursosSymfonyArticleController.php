@@ -22,7 +22,7 @@ class CursosSymfonyArticleController extends AbstractController
     {
         /** @var Article[] $articles */
         $articles = $repository->findAllPublishedOrderedByNewest();
-        return $this->render('article/index.html.twig', [
+        return $this->render('article/index.html.twig.twig', [
             'articles' => $articles
         ]);
     }
