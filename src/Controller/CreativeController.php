@@ -12,8 +12,14 @@ class CreativeController extends BaseController
      */
     public function index()
     {
-        return $this->render('creative/index.html.twig', [
-            'controller_name' => 'CreativeController',
-        ]);
+        return $this->render('creative/index.html.twig');
+    }
+
+    /**
+     * @Route("/creative/according", name="creative_according")
+     */
+    public function according()
+    {
+        return $this->render('creative/according.html.twig');
     }
 }
