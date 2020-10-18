@@ -38,4 +38,12 @@ class CreativeController extends BaseController
     {
         return $this->render('creative/add-post.html.twig');
     }
+
+    /**
+     * @Route("/creative/alert", name="creative_alert")
+     */
+    public function alert()
+    {
+        return $this->render('creative/alert.html.twig');
+    }
 }
