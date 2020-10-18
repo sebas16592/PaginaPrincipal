@@ -30,4 +30,12 @@ class CreativeController extends BaseController
     {
         return $this->render('creative/ace-code-editor.html.twig');
     }
+
+    /**
+     * @Route("/creative/add-post", name="creative_add_post")
+     */
+    public function addPost()
+    {
+        return $this->render('creative/add-post.html.twig');
+    }
 }
