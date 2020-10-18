@@ -22,4 +22,12 @@ class CreativeController extends BaseController
     {
         return $this->render('creative/according.html.twig');
     }
+
+    /**
+     * @Route("/creative/ace-code-editor", name="creative_ace_code_editor")
+     */
+    public function aceCodeEditor()
+    {
+        return $this->render('creative/ace-code-editor.html.twig');
+    }
 }

@@ -1,12 +1,12 @@
 <div class="page-sidebar iconcolor-sidebar">
     <div class="main-header-left d-none d-lg-block">
-        <div class="logo-wrapper"><a href="index.html.twig"><img src="{{ asset('creative/assets/images/creative-logo.png') }}" alt=""></a></div>
+        <div class="logo-wrapper"><a href="{{ path('creative') }}"><img src="{{ asset('creative/assets/images/creative-logo.png') }}" alt=""></a></div>
     </div>
     <div class="sidebar custom-scrollbar">
         <ul class="sidebar-menu">
             <li><a class="sidebar-header" href="#"><i data-feather="home"></i><span>Dashboard</span><span class="badge badge-pill gradient-primary-1">4</span><i class="fa fa-angle-right pull-right"></i></a>
                 <ul class="sidebar-submenu">
-                    <li><a href="index.html.twig"><i class="fa fa-circle"></i>Default</a></li>
+                    <li><a href="{{ path('creative') }}"><i class="fa fa-circle"></i>Default</a></li>
                     <li><a href="dashboard-hospital.html"><i class="fa fa-circle"></i>Hospital</a></li>
                     <li><a href="dashboard-sass.html"><i class="fa fa-circle"></i>Sass</a></li>
                     <li><a href="dashboard-crm.html"><i class="fa fa-circle"></i>Crm</a></li>
@@ -84,7 +84,7 @@
                             <li><a href="tab-material.html"><i class="fa fa-circle"></i>Line Tabs</a></li>
                         </ul>
                     </li>
-                    <li><a href="according.html"><i class="fa fa-circle"></i>Accordion</a></li>
+                    <li><a href="{{ path('creative_according') }}"><i class="fa fa-circle"></i>Accordion</a></li>
                     <li><a href="navs.html"><i class="fa fa-circle"></i>Navs</a></li>
                     <li><a href="box-shadow.html"><i class="fa fa-circle"></i>Shadow</a></li>
                     <li><a href="list.html"><i class="fa fa-circle"></i>Lists</a></li>
@@ -274,7 +274,7 @@
                     <li><a href="summernote.html"><i class="fa fa-circle"></i>Summer Note</a></li>
                     <li><a href="ckeditor.html"><i class="fa fa-circle"></i>CK editor</a></li>
                     <li><a href="simple-MDE.html"><i class="fa fa-circle"></i>MDE editor</a></li>
-                    <li><a href="ace-code-editor.html"><i class="fa fa-circle"></i>ACE code editor</a></li>
+                    <li><a href="{{ path('creative_ace_code_editor') }}"><i class="fa fa-circle"></i>ACE code editor</a></li>
                 </ul>
             </li>
             <li><a class="sidebar-header" href="#"><i data-feather="users"></i><span>Users</span><i class="fa fa-angle-right pull-right"></i></a>
