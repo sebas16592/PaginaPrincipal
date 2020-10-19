@@ -54,4 +54,12 @@ class CreativeController extends BaseController
     {
         return $this->render('creative/animate.html.twig');
     }
+
+    /**
+     * @Route("/creative/AOS", name="creative_AOS")
+     */
+    public function AOS()
+    {
+        return $this->render('creative/AOS.html.twig');
+    }
 }
