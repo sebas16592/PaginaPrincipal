@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class CreativeController extends BaseController
@@ -61,5 +60,13 @@ class CreativeController extends BaseController
     public function AOS()
     {
         return $this->render('creative/AOS.html.twig');
+    }
+
+    /**
+     * @Route("/creative/avatars", name="creative_avatars")
+     */
+    public function avatars()
+    {
+        return $this->render('creative/avatars.html.twig');
     }
 }
