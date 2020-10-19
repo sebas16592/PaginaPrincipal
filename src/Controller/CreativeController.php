@@ -46,4 +46,12 @@ class CreativeController extends BaseController
     {
         return $this->render('creative/alert.html.twig');
     }
+
+    /**
+     * @Route("/creative/animate", name="creative_animate")
+     */
+    public function animate()
+    {
+        return $this->render('creative/animate.html.twig');
+    }
 }
